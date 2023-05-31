@@ -58,6 +58,9 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+      - name: pnpm install
+        run: |
+          npm i pnpm
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
